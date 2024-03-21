@@ -1,0 +1,36 @@
+@font-face {
+  font-family: headerFont;
+  src: url(../../assets/Knewave-Regular.ttf);
+}
+
+.header-container {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  .text-white {
+    color: white;
+  }
+  .heading {
+    font-family: headerFont;
+    font-size: xx-large;
+  }
+}
+
+.client-dropdown {
+  margin: 16px;
+}
+
+.blue-header {
+  background: blue;
+}
+.green-header {
+  background: green;
+}
+.red-header {
+  background: red;
+}

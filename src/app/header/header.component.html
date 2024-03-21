@@ -1,0 +1,21 @@
+<div
+  class="header-container"
+  [ngClass]="{
+    'blue-header': selectedClient === 'clientA',
+    'green-header': selectedClient === 'clientB',
+    'red-header': selectedClient === 'clientC'
+  }"
+>
+  <h3 class="text-white heading">{{ selectedLabel }}</h3>
+  <mat-form-field class="client-dropdown">
+    <mat-select
+      name="selectedClient"
+      (valueChange)="valueChanged($event)"
+      [value]="selectedClient"
+    >
+      @for (client of clientDetails; track $index) {
+      <mat-option value="{{ client.value }}">{{ client.label }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+</div>
